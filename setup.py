@@ -2,7 +2,7 @@
 """Python Ring Door Bell setup script."""
 from setuptools import setup
 
-_VERSION = '0.2.4'
+_VERSION = '0.6.0'
 
 
 def readme():
@@ -22,7 +22,12 @@ setup(
     url='https://github.com/tchellomello/python-ring-doorbell',
     license='LGPLv3+',
     include_package_data=True,
-    install_requires=['requests', 'pytz'],
+    install_requires=[
+        'requests==2.22.0',
+        'requests-oauthlib==1.3.0',
+        'oauthlib==3.1.0',
+        'pytz'
+    ],
     test_suite='tests',
     keywords=[
         'ring',
@@ -36,8 +41,6 @@ setup(
         'GNU Lesser General Public License v3 or later (LGPLv3+)',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Topic :: Home Automation',
